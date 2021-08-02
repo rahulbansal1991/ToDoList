@@ -13,4 +13,3 @@
 * On tap of To Do, it redirects to detail screen of To Do where it shows To Do title and description. There are buttons for Updating and Deleting the To Do.
 * Used Realm for storing the To Do data locally in app.
 * Used IQKeyBoardManager for managing the keyboard and it's controls.
-
