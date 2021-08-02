@@ -10,7 +10,7 @@ import Foundation
 class Constants {
     
     // cell reuse id (cells that scroll out of view can be reused)
-    static let CellReuseIdentifierTaskList = "CellReuseIdentifierTaskList"
+    static let CellReuseIdentifierTaskList = "TaskTableViewCellIdentifier"
     
 }
 

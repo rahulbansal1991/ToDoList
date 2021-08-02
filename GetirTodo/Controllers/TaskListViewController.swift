@@ -37,7 +37,7 @@ class TaskListViewController: BaseViewController {
     func setupBindings() {
         
         // Register the table view cell class and its reuse id
-        self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: Constants.CellReuseIdentifierTaskList)
+//        self.tableView.register(TaskTableViewCell.self, forCellReuseIdentifier: Constants.CellReuseIdentifierTaskList)
                 
         self.tableView.delegate = self
         self.tableView.dataSource = self
@@ -71,6 +71,30 @@ class TaskListViewController: BaseViewController {
         taskDetailVC.task = task
         self.navigationController?.pushViewController(taskDetailVC, animated: true)
     }
+    
+    @objc func deleteTask(sender : UIButton) {
+        
+        let tappedRow = sender.tag
+        
+        // Fetch clicked task
+        let task = viewModel.taskList[tappedRow]
+        
+        viewModel.deleteTask(task: task) { (status) in
+            
+            if status {
+                // Show Success Alert
+                Utils.showAlterWithListenerBack(controller: self, title: AlertMessage.Title.success.rawValue, message: AlertMessage.Message.taskDelete.rawValue, listener: UIAlertAction.init(title: "OK", style: .default, handler: { (action) in
+                    
+                    // Refresh the task list
+                    self.loadData()
+                }))
+
+            } else {
+                // Show Fail Alert
+                Utils.showAlterWithListenerBack(controller: self, title: AlertMessage.Title.fail.rawValue, message: AlertMessage.Message.error.rawValue, listener: UIAlertAction.init(title: "OK", style: .default, handler: nil))
+            }
+        }
+    }
 }
 
 extension TaskListViewController: UITableViewDelegate, UITableViewDataSource {
@@ -84,14 +108,19 @@ extension TaskListViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.CellReuseIdentifierTaskList, for: indexPath)
+        if let cell = tableView.dequeueReusableCell(withIdentifier: Constants.CellReuseIdentifierTaskList, for: indexPath) as? TaskTableViewCell {
+            
+            let currentItem = viewModel.taskList[indexPath.row]
+            
+            cell.lblTitle.text = currentItem.title
+            
+            cell.btnDelete.tag = indexPath.row
+            cell.btnDelete.addTarget(self, action: #selector(deleteTask(sender:)), for: UIControl.Event.touchUpInside)
+            
+            return cell
+        }
         
-        let currentItem = viewModel.taskList[indexPath.row]
-        
-        cell.textLabel?.font = UIFont.systemFont(ofSize: 12)
-        cell.textLabel?.text = currentItem.title
-        
-        return cell
+        return UITableViewCell()
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -100,34 +129,5 @@ extension TaskListViewController: UITableViewDelegate, UITableViewDataSource {
         let currentItem = viewModel.taskList[indexPath.row]
         
         gotoTaskDetailScreen(task: currentItem)
-    }
-    
-    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        
-        if editingStyle == UITableViewCell.EditingStyle.delete {
-            
-            // Fetch clicked task
-            let task = viewModel.taskList[indexPath.row]
-            
-            viewModel.deleteTask(task: task) { (status) in
-                
-                if status {
-                    // Show Success Alert
-                    Utils.showAlterWithListenerBack(controller: self, title: AlertMessage.Title.success.rawValue, message: AlertMessage.Message.taskDelete.rawValue, listener: UIAlertAction.init(title: "OK", style: .default, handler: { (action) in
-                        
-                        // Refresh the task list
-                        self.loadData()
-                    }))
-
-                } else {
-                    // Show Fail Alert
-                    Utils.showAlterWithListenerBack(controller: self, title: AlertMessage.Title.fail.rawValue, message: AlertMessage.Message.error.rawValue, listener: UIAlertAction.init(title: "OK", style: .default, handler: nil))
-                }
-            }
-        }
     }
 }
