@@ -64,6 +64,13 @@ class TaskListViewController: BaseViewController {
     func hideNoDataView() {
         tableView.backgroundView = nil
     }
+    
+    func gotoTaskDetailScreen(task : Task) {
+        
+        let taskDetailVC = TaskListDetailViewController.instantiateViewController()
+        taskDetailVC.task = task
+        self.navigationController?.pushViewController(taskDetailVC, animated: true)
+    }
 }
 
 extension TaskListViewController: UITableViewDelegate, UITableViewDataSource {
@@ -90,6 +97,9 @@ extension TaskListViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
+        let currentItem = viewModel.taskList[indexPath.row]
+        
+        gotoTaskDetailScreen(task: currentItem)
     }
     
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

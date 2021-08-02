@@ -56,6 +56,23 @@ class DatabaseManager : NSObject {
         self.addObject(object: task, update: false, completion: completion)
     }
     
+    func updateTask(task: Task, title: String, detail: String, completion : CompletionHandlerDelegate) {
+        
+        let realm = self.getRealm()
+        do {
+            try realm.write {
+                task.title = title
+                task.detail = detail
+            }
+            
+            completion(true)
+        }
+        catch {
+            print("Realm error: Cannot write: \(task)")
+            completion(false)
+        }
+    }
+    
     func getTaskById(id: String) -> Task? {
         
         let results: Results<Task> = self.getRealm().objects(Task.self)

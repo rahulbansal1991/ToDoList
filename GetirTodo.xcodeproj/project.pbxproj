@@ -20,6 +20,8 @@
 		B7AB3EFA26B8508A00EF630B /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7AB3EF526B8508A00EF630B /* UIViewExtension.swift */; };
 		B7AB3EFB26B8508A00EF630B /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7AB3EF626B8508A00EF630B /* DatabaseManager.swift */; };
 		B7AB3EFC26B8508A00EF630B /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7AB3EF726B8508A00EF630B /* Utils.swift */; };
+		B7AB3F0126B8515C00EF630B /* TaskListDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7AB3F0026B8515C00EF630B /* TaskListDetailViewController.swift */; };
+		B7AB3F0626B8516F00EF630B /* TaskListDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7AB3F0526B8516F00EF630B /* TaskListDetailViewModel.swift */; };
 		F72669392590B8DE00AB3034 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72669382590B8DE00AB3034 /* AppDelegate.swift */; };
 		F726693B2590B8DE00AB3034 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F726693A2590B8DE00AB3034 /* SceneDelegate.swift */; };
 		F72669402590B8DE00AB3034 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F726693E2590B8DE00AB3034 /* Main.storyboard */; };
@@ -62,6 +64,8 @@
 		B7AB3EF526B8508A00EF630B /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		B7AB3EF626B8508A00EF630B /* DatabaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		B7AB3EF726B8508A00EF630B /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		B7AB3F0026B8515C00EF630B /* TaskListDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskListDetailViewController.swift; sourceTree = "<group>"; };
+		B7AB3F0526B8516F00EF630B /* TaskListDetailViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskListDetailViewModel.swift; sourceTree = "<group>"; };
 		EACE179572B6A1DF7BA8E168 /* Pods-GetirTodoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GetirTodoTests.debug.xcconfig"; path = "Target Support Files/Pods-GetirTodoTests/Pods-GetirTodoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		EDDA5DF78EE4D5091C8A4E16 /* Pods-GetirTodo-GetirTodoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GetirTodo-GetirTodoUITests.debug.xcconfig"; path = "Target Support Files/Pods-GetirTodo-GetirTodoUITests/Pods-GetirTodo-GetirTodoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		F169905808C4717684914640 /* Pods-GetirTodoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GetirTodoTests.release.xcconfig"; path = "Target Support Files/Pods-GetirTodoTests/Pods-GetirTodoTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -148,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				B7AB3EDA26B84F4F00EF630B /* TaskListViewModel.swift */,
+				B7AB3F0526B8516F00EF630B /* TaskListDetailViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -157,6 +162,7 @@
 			children = (
 				B7AB3EEE26B8502400EF630B /* BaseViewController.swift */,
 				B7AB3EDF26B84F5C00EF630B /* TaskListViewController.swift */,
+				B7AB3F0026B8515C00EF630B /* TaskListDetailViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -488,10 +494,12 @@
 				B7AB3EE026B84F5C00EF630B /* TaskListViewController.swift in Sources */,
 				B7AB3EF826B8508A00EF630B /* UITableViewExtension.swift in Sources */,
 				F726693B2590B8DE00AB3034 /* SceneDelegate.swift in Sources */,
+				B7AB3F0126B8515C00EF630B /* TaskListDetailViewController.swift in Sources */,
 				B7AB3EF926B8508A00EF630B /* StringExtension.swift in Sources */,
 				B7AB3EEA26B84F8400EF630B /* Task.swift in Sources */,
 				B7AB3EEF26B8502400EF630B /* BaseViewController.swift in Sources */,
 				B7AB3EDB26B84F4F00EF630B /* TaskListViewModel.swift in Sources */,
+				B7AB3F0626B8516F00EF630B /* TaskListDetailViewModel.swift in Sources */,
 				B7AB3EFC26B8508A00EF630B /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
