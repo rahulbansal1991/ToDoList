@@ -10,6 +10,16 @@
 		03B1B824DA47759CB0C04DDE /* Pods_GetirTodo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C84B79BF33FE0846D84794C /* Pods_GetirTodo.framework */; };
 		0421EB47E47810F8759D1B14 /* Pods_GetirTodo_GetirTodoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80D93E77890554D3B40D8BF0 /* Pods_GetirTodo_GetirTodoUITests.framework */; };
 		8FAEC089A4CD0018D97E63F6 /* Pods_GetirTodoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF2C762CF9ED5DC94B0116B8 /* Pods_GetirTodoTests.framework */; };
+		B7AB3EDB26B84F4F00EF630B /* TaskListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7AB3EDA26B84F4F00EF630B /* TaskListViewModel.swift */; };
+		B7AB3EE026B84F5C00EF630B /* TaskListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7AB3EDF26B84F5C00EF630B /* TaskListViewController.swift */; };
+		B7AB3EE526B84F7900EF630B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7AB3EE426B84F7900EF630B /* Constants.swift */; };
+		B7AB3EEA26B84F8400EF630B /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7AB3EE926B84F8400EF630B /* Task.swift */; };
+		B7AB3EEF26B8502400EF630B /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7AB3EEE26B8502400EF630B /* BaseViewController.swift */; };
+		B7AB3EF826B8508A00EF630B /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7AB3EF326B8508A00EF630B /* UITableViewExtension.swift */; };
+		B7AB3EF926B8508A00EF630B /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7AB3EF426B8508A00EF630B /* StringExtension.swift */; };
+		B7AB3EFA26B8508A00EF630B /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7AB3EF526B8508A00EF630B /* UIViewExtension.swift */; };
+		B7AB3EFB26B8508A00EF630B /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7AB3EF626B8508A00EF630B /* DatabaseManager.swift */; };
+		B7AB3EFC26B8508A00EF630B /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7AB3EF726B8508A00EF630B /* Utils.swift */; };
 		F72669392590B8DE00AB3034 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72669382590B8DE00AB3034 /* AppDelegate.swift */; };
 		F726693B2590B8DE00AB3034 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F726693A2590B8DE00AB3034 /* SceneDelegate.swift */; };
 		F72669402590B8DE00AB3034 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F726693E2590B8DE00AB3034 /* Main.storyboard */; };
@@ -42,6 +52,16 @@
 		7A73F88F6F740241AA0DC047 /* Pods-GetirTodo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GetirTodo.debug.xcconfig"; path = "Target Support Files/Pods-GetirTodo/Pods-GetirTodo.debug.xcconfig"; sourceTree = "<group>"; };
 		80D93E77890554D3B40D8BF0 /* Pods_GetirTodo_GetirTodoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GetirTodo_GetirTodoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C84B79BF33FE0846D84794C /* Pods_GetirTodo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GetirTodo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B7AB3EDA26B84F4F00EF630B /* TaskListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskListViewModel.swift; sourceTree = "<group>"; };
+		B7AB3EDF26B84F5C00EF630B /* TaskListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskListViewController.swift; sourceTree = "<group>"; };
+		B7AB3EE426B84F7900EF630B /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		B7AB3EE926B84F8400EF630B /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		B7AB3EEE26B8502400EF630B /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		B7AB3EF326B8508A00EF630B /* UITableViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
+		B7AB3EF426B8508A00EF630B /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		B7AB3EF526B8508A00EF630B /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		B7AB3EF626B8508A00EF630B /* DatabaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
+		B7AB3EF726B8508A00EF630B /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		EACE179572B6A1DF7BA8E168 /* Pods-GetirTodoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GetirTodoTests.debug.xcconfig"; path = "Target Support Files/Pods-GetirTodoTests/Pods-GetirTodoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		EDDA5DF78EE4D5091C8A4E16 /* Pods-GetirTodo-GetirTodoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GetirTodo-GetirTodoUITests.debug.xcconfig"; path = "Target Support Files/Pods-GetirTodo-GetirTodoUITests/Pods-GetirTodo-GetirTodoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		F169905808C4717684914640 /* Pods-GetirTodoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GetirTodoTests.release.xcconfig"; path = "Target Support Files/Pods-GetirTodoTests/Pods-GetirTodoTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -115,6 +135,11 @@
 		B7AB3EC526B8495600EF630B /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				B7AB3EF626B8508A00EF630B /* DatabaseManager.swift */,
+				B7AB3EF426B8508A00EF630B /* StringExtension.swift */,
+				B7AB3EF326B8508A00EF630B /* UITableViewExtension.swift */,
+				B7AB3EF526B8508A00EF630B /* UIViewExtension.swift */,
+				B7AB3EF726B8508A00EF630B /* Utils.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -122,6 +147,7 @@
 		B7AB3EC626B8495600EF630B /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				B7AB3EDA26B84F4F00EF630B /* TaskListViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -129,6 +155,8 @@
 		B7AB3EC726B8495600EF630B /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				B7AB3EEE26B8502400EF630B /* BaseViewController.swift */,
+				B7AB3EDF26B84F5C00EF630B /* TaskListViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -136,6 +164,7 @@
 		B7AB3EC826B8495600EF630B /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				B7AB3EE926B84F8400EF630B /* Task.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -184,6 +213,7 @@
 		F72669372590B8DE00AB3034 /* GetirTodo */ = {
 			isa = PBXGroup;
 			children = (
+				B7AB3EE426B84F7900EF630B /* Constants.swift */,
 				B7AB3EC826B8495600EF630B /* Models */,
 				B7AB3ECA26B8495600EF630B /* Views */,
 				B7AB3EC626B8495600EF630B /* ViewModels */,
@@ -451,8 +481,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7AB3EFA26B8508A00EF630B /* UIViewExtension.swift in Sources */,
+				B7AB3EFB26B8508A00EF630B /* DatabaseManager.swift in Sources */,
+				B7AB3EE526B84F7900EF630B /* Constants.swift in Sources */,
 				F72669392590B8DE00AB3034 /* AppDelegate.swift in Sources */,
+				B7AB3EE026B84F5C00EF630B /* TaskListViewController.swift in Sources */,
+				B7AB3EF826B8508A00EF630B /* UITableViewExtension.swift in Sources */,
 				F726693B2590B8DE00AB3034 /* SceneDelegate.swift in Sources */,
+				B7AB3EF926B8508A00EF630B /* StringExtension.swift in Sources */,
+				B7AB3EEA26B84F8400EF630B /* Task.swift in Sources */,
+				B7AB3EEF26B8502400EF630B /* BaseViewController.swift in Sources */,
+				B7AB3EDB26B84F4F00EF630B /* TaskListViewModel.swift in Sources */,
+				B7AB3EFC26B8508A00EF630B /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
