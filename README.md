@@ -1,4 +1,4 @@
-# GetirTodo
+# A simple Todo list
 
 * A To Do app, written in Swift for iOS.
 * Project is build on MVVM architecture.
